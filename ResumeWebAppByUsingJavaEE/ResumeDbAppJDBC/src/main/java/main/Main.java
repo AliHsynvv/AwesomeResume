@@ -9,6 +9,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        UserDaoInter userDaoInter=Context.instanceUserDao();
+        User u=userDaoInter.getByteID(5);
+        System.out.println(u.getName());
 
     }
 

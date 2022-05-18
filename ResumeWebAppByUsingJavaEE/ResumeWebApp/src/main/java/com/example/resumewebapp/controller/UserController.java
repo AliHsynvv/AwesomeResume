@@ -11,15 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "UserController", value = "/users")
+@WebServlet(name = "UserController", urlPatterns = {"/users"})
 public class UserController extends HttpServlet {
-
-    private UserDaoInter userDao = Context.instanceUserDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.getRequestDispatcher("users.jsp").forward(request, response);
+
+        request.getRequestDispatcher("users.jsp").forward(request, response);
     }
+
+
 
 
 }

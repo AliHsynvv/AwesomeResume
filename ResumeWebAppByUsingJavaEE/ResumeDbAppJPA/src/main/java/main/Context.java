@@ -1,7 +1,7 @@
 package main;
 
-import entity.dao.impl.*;
-import entity.dao.inter.*;
+import com.company.dao.impl.*;
+import com.company.dao.inter.*;
 
 public class Context {
     public static UserDaoInter instanceUserDao() {

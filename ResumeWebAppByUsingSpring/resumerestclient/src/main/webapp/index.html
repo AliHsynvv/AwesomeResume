@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function printUsers(arr) {
+            var container = document.getElementById("container");
+            for (var i = 0; arr.length; i++) {
+                var obj = arr[i]
+                var str = obj.id + "" + obj.name + "" + obj.surname + "<br/>";
+                container.innerHTML += str;
+            }
+        }
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    var list = response.obj;
+                    printUsers(list)
+                }
+            };
+            xhttp.open("GET", "http://localhost:8080/resumerest/users", true);
+            xhttp.send();
+        }
+
+
+    </script>
+</head>
+<body onload="loadDoc()">
+<div id="container"></div>
+</body>
+</html>

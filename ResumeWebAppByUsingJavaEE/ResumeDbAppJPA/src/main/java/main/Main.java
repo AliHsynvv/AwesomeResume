@@ -1,17 +1,13 @@
 package main;
 
-import entity.User;
-import entity.dao.impl.UserDaoImpl;
-import entity.dao.inter.UserDaoInter;
-
-import javax.xml.bind.SchemaOutputResolver;
-import java.util.Scanner;
+import com.company.entity.User;
+import com.company.dao.inter.UserDaoInter;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         UserDaoInter userDao = Context.instanceUserDao();
-        userDao.removeUser(10);
-
+        User u = userDao.findByEmail("gsynvali@gmail.com");
+        System.out.println(u.getId());
     }
 }
 

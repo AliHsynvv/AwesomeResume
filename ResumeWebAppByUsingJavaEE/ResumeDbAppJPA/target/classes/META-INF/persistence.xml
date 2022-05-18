@@ -5,11 +5,11 @@
              version="2.2">
     <persistence-unit name="default">
 
-        <class>entity.Country</class>
-        <class>entity.EmploymentHistory</class>
-        <class>entity.Skill</class>
-        <class>entity.User</class>
-        <class>entity.UserSkill</class>
+        <class>com.company.entity.Country</class>
+        <class>com.company.entity.EmploymentHistory</class>
+        <class>com.company.entity.Skill</class>
+        <class>com.company.entity.User</class>
+        <class>com.company.entity.UserSkill</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/resume"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>

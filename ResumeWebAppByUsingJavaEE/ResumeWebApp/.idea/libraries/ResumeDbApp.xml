@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="ResumeDbApp">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ResumeDbApp/out/artifacts/ResumeDbApp_jar/ResumeDbApp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ResumeDbAppJDBC/out/artifacts/ResumeDbApp_jar/ResumeDbApp.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
